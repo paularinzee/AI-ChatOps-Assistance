@@ -1,0 +1,15 @@
+Flask==3.0.0
+slack-sdk==3.26.1
+openai==1.12.0
+python-dotenv==1.0.0
+
+# Optional but recommended dependencies
+
+# WSGI Server for production
+gunicorn==21.2.0
+
+# HTTP client (dependency for openai)
+httpx==0.26.0
+
+# Type hints support
+typing-extensions==4.9.0

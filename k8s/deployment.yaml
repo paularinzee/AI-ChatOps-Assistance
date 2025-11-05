@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatops-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chatops-bot
+  template:
+    metadata:
+      labels:
+        app: chatops-bot
+    spec:
+      containers:
+        - name: chatops-bot
+          image: paularinze/chatops-bot:latest
+          envFrom:
+            - secretRef:
+                name: chatops-secrets
